@@ -27,10 +27,13 @@
                                     <constraint firstAttribute="height" constant="44" id="HTX-hr-gvH"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Navigation Bar" id="Mib-Z3-lHL">
+                                    <navigationItem title="Stopwatch" id="Mib-Z3-lHL">
                                         <barButtonItem key="leftBarButtonItem" systemItem="camera" id="bOn-ul-ATf"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="rewind" id="OWr-Uo-oYY">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="OWr-Uo-oYY">
                                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="elS-eW-hZW"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -41,27 +44,46 @@
                                     <constraint firstAttribute="height" constant="44" id="IYI-Li-SCI"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem systemItem="organize" id="RlM-36-Y8G"/>
+                                    <barButtonItem style="plain" systemItem="stop" id="eAh-aj-fMo">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="PXG-c0-N2Q"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="k7S-j3-PBH"/>
-                                    <barButtonItem systemItem="search" id="wNe-0q-WMd"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="zxI-Lm-5mK"/>
-                                    <barButtonItem systemItem="action" id="RIc-yh-TZ8"/>
+                                    <barButtonItem style="plain" systemItem="pause" id="KCS-vN-Kyy">
+                                        <connections>
+                                            <action selector="reset:" destination="BYZ-38-t0r" id="pZa-6Q-0ox"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OwB-Y5-2kw">
+                                <rect key="frame" x="91" y="270" width="193" height="126"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5bD-b9-jev" secondAttribute="trailing" id="00N-Ht-Un0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5bD-b9-jev" secondAttribute="bottom" constant="10" id="K2D-7b-sEg"/>
                             <constraint firstItem="5bD-b9-jev" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LuE-fa-Lla"/>
+                            <constraint firstItem="OwB-Y5-2kw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NqO-IU-mI3"/>
                             <constraint firstAttribute="trailing" secondItem="FGG-rt-RJ4" secondAttribute="trailing" constant="20" id="QRT-T6-pn3"/>
                             <constraint firstItem="FGG-rt-RJ4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Rqv-cX-QNr"/>
                             <constraint firstItem="FGG-rt-RJ4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jm9-Nk-ixk"/>
+                            <constraint firstItem="OwB-Y5-2kw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lmH-bs-I6K"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="OwB-Y5-2kw" id="XQN-Ro-ARv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="103.89805097451276"/>
         </scene>
     </scenes>
 </document>
