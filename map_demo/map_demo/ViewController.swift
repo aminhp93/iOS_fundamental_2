@@ -8,13 +8,20 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate {
-
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    var locationManager = CLLocationManager()
+    
     @IBOutlet weak var map: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
         // Do any additional setup after loading the view, typically from a nib.
 //        var latitude:CLLocationDegrees = 40.7
 //        var longtitude:CLLocationDegrees = -73.9
@@ -46,6 +53,22 @@ class ViewController: UIViewController, MKMapViewDelegate {
         uilpgr.minimumPressDuration = 2
         map.addGestureRecognizer(uilpgr)
     }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations)
+        var userLocation:CLLocation = locations[0]
+        var latitude = userLocation.coordinate.latitude
+        var longtitude = userLocation.coordinate.longitude
+        
+        var latDelta:CLLocationDegrees = 0.05
+        var longDelta:CLLocationDegrees = 0.05
+        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        var location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longtitude)
+        var region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        
+        self.map.setRegion(region, animated: false)
+
+    }
 
     func action(gestureRecognizer: UIGestureRecognizer){
         print("Gestrure Recognized")
@@ -60,11 +83,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
         map.addAnnotation(annotation)
         
     }
-    
-    
-    
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

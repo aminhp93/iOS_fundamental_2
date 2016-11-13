@@ -14,6 +14,7 @@
 		273960511DD906DD0051F1BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2739604F1DD906DD0051F1BD /* LaunchScreen.storyboard */; };
 		2739605C1DD906DD0051F1BD /* map_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739605B1DD906DD0051F1BD /* map_demoTests.swift */; };
 		273960671DD906DD0051F1BD /* map_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273960661DD906DD0051F1BD /* map_demoUITests.swift */; };
+		273960761DD913F60051F1BD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273960751DD913F60051F1BD /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		273960621DD906DD0051F1BD /* map_demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = map_demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		273960661DD906DD0051F1BD /* map_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map_demoUITests.swift; sourceTree = "<group>"; };
 		273960681DD906DD0051F1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		273960751DD913F60051F1BD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273960761DD913F60051F1BD /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				2739605A1DD906DD0051F1BD /* map_demoTests */,
 				273960651DD906DD0051F1BD /* map_demoUITests */,
 				273960441DD906DD0051F1BD /* Products */,
+				273960741DD913F60051F1BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				273960681DD906DD0051F1BD /* Info.plist */,
 			);
 			path = map_demoUITests;
+			sourceTree = "<group>";
+		};
+		273960741DD913F60051F1BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				273960751DD913F60051F1BD /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
