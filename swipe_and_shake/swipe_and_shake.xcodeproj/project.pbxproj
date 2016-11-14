@@ -14,6 +14,8 @@
 		273962031DD95A7E0051F1BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273962011DD95A7E0051F1BD /* LaunchScreen.storyboard */; };
 		2739620E1DD95A7E0051F1BD /* swipe_and_shakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739620D1DD95A7E0051F1BD /* swipe_and_shakeTests.swift */; };
 		273962191DD95A7E0051F1BD /* swipe_and_shakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273962181DD95A7E0051F1BD /* swipe_and_shakeUITests.swift */; };
+		273962271DD9679A0051F1BD /* hello.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 273962261DD9679A0051F1BD /* hello.mp3 */; };
+		273962291DD967A50051F1BD /* millionaire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 273962281DD967A50051F1BD /* millionaire.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		273962141DD95A7E0051F1BD /* swipe_and_shakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swipe_and_shakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		273962181DD95A7E0051F1BD /* swipe_and_shakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipe_and_shakeUITests.swift; sourceTree = "<group>"; };
 		2739621A1DD95A7E0051F1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		273962261DD9679A0051F1BD /* hello.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hello.mp3; path = ../../../../../Desktop/hello.mp3; sourceTree = "<group>"; };
+		273962281DD967A50051F1BD /* millionaire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = millionaire.mp3; path = ../../../../../Desktop/millionaire.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 				273961FA1DD95A7E0051F1BD /* ViewController.swift */,
 				273961FC1DD95A7E0051F1BD /* Main.storyboard */,
 				273961FF1DD95A7E0051F1BD /* Assets.xcassets */,
+				273962261DD9679A0051F1BD /* hello.mp3 */,
 				273962011DD95A7E0051F1BD /* LaunchScreen.storyboard */,
+				273962281DD967A50051F1BD /* millionaire.mp3 */,
 				273962041DD95A7E0051F1BD /* Info.plist */,
 			);
 			path = swipe_and_shake;
@@ -232,9 +238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				273962291DD967A50051F1BD /* millionaire.mp3 in Resources */,
 				273962031DD95A7E0051F1BD /* LaunchScreen.storyboard in Resources */,
 				273962001DD95A7E0051F1BD /* Assets.xcassets in Resources */,
 				273961FE1DD95A7E0051F1BD /* Main.storyboard in Resources */,
+				273962271DD9679A0051F1BD /* hello.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
