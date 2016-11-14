@@ -53,6 +53,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             } else {
                 
                 let p = CLPlacemark(placemark: placemarks![0] as! CLPlacemark)
+                    
                 print(p)
                 var subThoroughfare:String = ""
                 
