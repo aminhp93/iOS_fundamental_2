@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="back_to_bach" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKX-DL-Ga2">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="9N3-2N-AMb"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Be A Millionaire" id="CVH-Rb-V1D">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="0QN-Al-glh">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="iO5-uO-CFT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbt-Zf-fEv">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dpd-uz-Z6c"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="iXQ-V7-r8q">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="pfa-pw-Yje"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KhT-HR-Ivg"/>
+                                    <barButtonItem title="Stop" systemItem="stop" id="ehy-0f-gm0">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="NYj-dd-hEI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mario.png" translatesAutoresizingMaskIntoConstraints="NO" id="3xT-vi-EKi">
+                                <rect key="frame" x="60" y="153" width="255" height="264"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="c9Z-KV-jys"/>
+                                    <constraint firstAttribute="height" constant="264" id="pgz-Lk-r74"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="C4T-ZI-u1G">
+                                <rect key="frame" x="58" y="446" width="259" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JZx-u3-DZn"/>
+                                    <constraint firstAttribute="width" constant="255" id="qsD-xD-Km5"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="adjustVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="kJJ-93-BLb"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="YwU-L2-nj8" userLabel="Scrub Slider">
+                                <rect key="frame" x="58" y="509" width="259" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="255" id="mGh-qc-zFT"/>
+                                    <constraint firstAttribute="height" constant="30" id="t2X-JP-Xmd"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="scrubSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xq8-sB-d0B"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3xT-vi-EKi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3gN-qQ-qbj"/>
+                            <constraint firstItem="YwU-L2-nj8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3mr-5q-AZy"/>
+                            <constraint firstItem="ZKX-DL-Ga2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="7Yc-dG-BKu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nbt-Zf-fEv" secondAttribute="bottom" id="KL7-9b-OXA"/>
+                            <constraint firstAttribute="trailing" secondItem="ZKX-DL-Ga2" secondAttribute="trailing" id="ahA-cU-egJ"/>
+                            <constraint firstItem="nbt-Zf-fEv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bso-uz-mpK"/>
+                            <constraint firstItem="YwU-L2-nj8" firstAttribute="top" secondItem="C4T-ZI-u1G" secondAttribute="bottom" constant="33" id="gzf-ZA-5xD"/>
+                            <constraint firstItem="3xT-vi-EKi" firstAttribute="top" secondItem="ZKX-DL-Ga2" secondAttribute="bottom" constant="65" id="hUB-qC-grH"/>
+                            <constraint firstItem="C4T-ZI-u1G" firstAttribute="top" secondItem="3xT-vi-EKi" secondAttribute="bottom" constant="29" id="qbz-iZ-7iG"/>
+                            <constraint firstItem="C4T-ZI-u1G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="unY-qW-hGI"/>
+                            <constraint firstItem="ZKX-DL-Ga2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x8x-es-FVj"/>
+                            <constraint firstAttribute="trailing" secondItem="nbt-Zf-fEv" secondAttribute="trailing" id="zWH-Eh-Zkg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrubSlider" destination="YwU-L2-nj8" id="mXR-d8-QnA"/>
+                        <outlet property="volumeSlider" destination="C4T-ZI-u1G" id="37J-Na-5De"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Mario.png" width="2192" height="2920"/>
+    </resources>
+</document>
