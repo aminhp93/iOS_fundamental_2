@@ -205,6 +205,7 @@
 				TargetAttributes = {
 					2739607F1DD917830051F1BD = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = LVA22MYZ28;
 						ProvisioningStyle = Automatic;
 					};
 					273960931DD917830051F1BD = {
@@ -424,9 +425,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LVA22MYZ28;
 				INFOPLIST_FILE = where_am_I/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "single-view-project.where-am-I";
+				PRODUCT_BUNDLE_IDENTIFIER = "minhpn.org.ec1-gmail.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -436,9 +438,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LVA22MYZ28;
 				INFOPLIST_FILE = where_am_I/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "single-view-project.where-am-I";
+				PRODUCT_BUNDLE_IDENTIFIER = "minhpn.org.ec1-gmail.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -517,6 +520,7 @@
 				273960AA1DD917830051F1BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		273960AB1DD917830051F1BD /* Build configuration list for PBXNativeTarget "where_am_ITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +529,7 @@
 				273960AD1DD917830051F1BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		273960AE1DD917830051F1BD /* Build configuration list for PBXNativeTarget "where_am_IUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +538,7 @@
 				273960B01DD917830051F1BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

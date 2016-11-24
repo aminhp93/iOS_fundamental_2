@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272E20EC1DDAC242006E99A3 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 272E20EA1DDAC242006E99A3 /* 2.png */; };
+		272E20ED1DDAC242006E99A3 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 272E20EB1DDAC242006E99A3 /* 3.png */; };
+		272E20F11DDAC26A006E99A3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 272E20F01DDAC26A006E99A3 /* iCarousel.m */; };
 		273961BB1DD952420051F1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273961BA1DD952420051F1BD /* AppDelegate.swift */; };
 		273961BD1DD952420051F1BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273961BC1DD952420051F1BD /* ViewController.swift */; };
 		273961C01DD952420051F1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273961BE1DD952420051F1BD /* Main.storyboard */; };
@@ -15,7 +18,7 @@
 		273961D01DD952430051F1BD /* back_to_bachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273961CF1DD952430051F1BD /* back_to_bachTests.swift */; };
 		273961DB1DD952430051F1BD /* back_to_bachUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273961DA1DD952430051F1BD /* back_to_bachUITests.swift */; };
 		273961E91DD952550051F1BD /* millionaire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 273961E81DD952550051F1BD /* millionaire.mp3 */; };
-		273961EB1DD953390051F1BD /* Mario.png in Resources */ = {isa = PBXBuildFile; fileRef = 273961EA1DD953390051F1BD /* Mario.png */; };
+		273961EB1DD953390051F1BD /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 273961EA1DD953390051F1BD /* 1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		272E20EA1DDAC242006E99A3 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		272E20EB1DDAC242006E99A3 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		272E20EE1DDAC269006E99A3 /* back_to_bach-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "back_to_bach-Bridging-Header.h"; sourceTree = "<group>"; };
+		272E20EF1DDAC26A006E99A3 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		272E20F01DDAC26A006E99A3 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		273961B71DD952420051F1BD /* back_to_bach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = back_to_bach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		273961BA1DD952420051F1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		273961BC1DD952420051F1BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +58,7 @@
 		273961DA1DD952430051F1BD /* back_to_bachUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = back_to_bachUITests.swift; sourceTree = "<group>"; };
 		273961DC1DD952430051F1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		273961E81DD952550051F1BD /* millionaire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = millionaire.mp3; path = ../../../../../Desktop/millionaire.mp3; sourceTree = "<group>"; };
-		273961EA1DD953390051F1BD /* Mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mario.png; path = ../../../../../Desktop/Mario.png; sourceTree = "<group>"; };
+		273961EA1DD953390051F1BD /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = ../../../../../Desktop/1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +113,15 @@
 				273961BC1DD952420051F1BD /* ViewController.swift */,
 				273961BE1DD952420051F1BD /* Main.storyboard */,
 				273961C11DD952420051F1BD /* Assets.xcassets */,
+				272E20EF1DDAC26A006E99A3 /* iCarousel.h */,
+				272E20F01DDAC26A006E99A3 /* iCarousel.m */,
 				273961E81DD952550051F1BD /* millionaire.mp3 */,
-				273961EA1DD953390051F1BD /* Mario.png */,
+				272E20EA1DDAC242006E99A3 /* 2.png */,
+				272E20EB1DDAC242006E99A3 /* 3.png */,
+				273961EA1DD953390051F1BD /* 1.png */,
 				273961C31DD952420051F1BD /* LaunchScreen.storyboard */,
 				273961C61DD952420051F1BD /* Info.plist */,
+				272E20EE1DDAC269006E99A3 /* back_to_bach-Bridging-Header.h */,
 			);
 			path = back_to_bach;
 			sourceTree = "<group>";
@@ -199,6 +212,8 @@
 				TargetAttributes = {
 					273961B61DD952420051F1BD = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = LVA22MYZ28;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					273961CA1DD952430051F1BD = {
@@ -238,11 +253,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272E20EC1DDAC242006E99A3 /* 2.png in Resources */,
 				273961C51DD952420051F1BD /* LaunchScreen.storyboard in Resources */,
 				273961C21DD952420051F1BD /* Assets.xcassets in Resources */,
 				273961E91DD952550051F1BD /* millionaire.mp3 in Resources */,
 				273961C01DD952420051F1BD /* Main.storyboard in Resources */,
-				273961EB1DD953390051F1BD /* Mario.png in Resources */,
+				272E20ED1DDAC242006E99A3 /* 3.png in Resources */,
+				273961EB1DD953390051F1BD /* 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272E20F11DDAC26A006E99A3 /* iCarousel.m in Sources */,
 				273961BD1DD952420051F1BD /* ViewController.swift in Sources */,
 				273961BB1DD952420051F1BD /* AppDelegate.swift in Sources */,
 			);
@@ -420,10 +438,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = LVA22MYZ28;
 				INFOPLIST_FILE = back_to_bach/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "single-view-project.back-to-bach";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "back_to_bach/back_to_bach-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
@@ -432,10 +454,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = LVA22MYZ28;
 				INFOPLIST_FILE = back_to_bach/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "single-view-project.back-to-bach";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "back_to_bach/back_to_bach-Bridging-Header.h";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
@@ -513,6 +538,7 @@
 				273961E11DD952430051F1BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		273961E21DD952430051F1BD /* Build configuration list for PBXNativeTarget "back_to_bachTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +547,7 @@
 				273961E41DD952430051F1BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		273961E51DD952430051F1BD /* Build configuration list for PBXNativeTarget "back_to_bachUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +556,7 @@
 				273961E71DD952430051F1BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

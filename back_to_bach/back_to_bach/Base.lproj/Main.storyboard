@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Data Source-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="back_to_bach" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,7 +55,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mario.png" translatesAutoresizingMaskIntoConstraints="NO" id="3xT-vi-EKi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="3xT-vi-EKi">
                                 <rect key="frame" x="60" y="153" width="255" height="264"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="255" id="c9Z-KV-jys"/>
@@ -82,6 +82,15 @@
                                     <action selector="scrubSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xq8-sB-d0B"/>
                                 </connections>
                             </slider>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Pt-4q-RWT" customClass="iCarousel">
+                                <rect key="frame" x="33" y="132" width="311" height="306"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="j14-80-QMk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="92a-us-S1I"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -100,6 +109,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="carouselView" destination="0Pt-4q-RWT" id="RDV-Rn-Us3"/>
                         <outlet property="scrubSlider" destination="YwU-L2-nj8" id="mXR-d8-QnA"/>
                         <outlet property="volumeSlider" destination="C4T-ZI-u1G" id="37J-Na-5De"/>
                     </connections>
@@ -110,6 +120,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Mario.png" width="2192" height="2920"/>
+        <image name="1.png" width="1486" height="1735"/>
     </resources>
 </document>

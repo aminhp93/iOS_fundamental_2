@@ -41,7 +41,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.map.setRegion(region, animated: true)
             
             var annotation = MKPointAnnotation()
-
+            
+            
             annotation.coordinate = coordinate
 
             annotation.title = places[activePlace]["name"]
