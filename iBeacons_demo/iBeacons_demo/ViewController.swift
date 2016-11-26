@@ -39,7 +39,7 @@ class ViewController: UIViewController, CBPeripheralManagerDelegate {
         
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: nil)
         
-        uuidField.text = "8AF5672D-A7B9-4196-801D-72B29A6BC2B1"
+        uuidField.text = "A98DD195-4C42-4DE8-859D-66E462CD2F86"
         
     }
 

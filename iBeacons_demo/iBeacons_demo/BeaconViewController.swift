@@ -27,10 +27,6 @@ class BeaconViewController: UIViewController, CLLocationManagerDelegate{
     var locationManager:CLLocationManager!
     var isSearching = false
     
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -44,10 +40,12 @@ class BeaconViewController: UIViewController, CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status{
         case .authorizedAlways:
+            print("Authorized")
             break
         case .authorizedWhenInUse:
             break
         case .denied:
+            print("Denied")
             break
         case .notDetermined:
             break
@@ -68,12 +66,22 @@ class BeaconViewController: UIViewController, CLLocationManagerDelegate{
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print("Beacon region entered \(region)")
+    }
+    
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         print("Beacon region exited \(region)")
     }
     
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         //
+        
+        if beacons.count > 0{
+            self.updateStatusLabels(beacons: beacons)
+            locationManager.stopRangingBeacons(in: region)
+            self.updateButtonTitle()
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -89,12 +97,101 @@ class BeaconViewController: UIViewController, CLLocationManagerDelegate{
         print("Error \(error)")
     }
     
+    // MARK: Helpers
     
-    // Action
+    func getProximityString(proximity: CLProximity) -> String{
+        switch proximity{
+        case .immediate:
+            return "Immediate"
+        case .near:
+            return "Near"
+        case .far:
+            return "Far"
+        case .unknown:
+            return "Unknown"
+        }
+    }
+    
+    
+    
+    
+    // MARK: Main
+    
+    func initializedLocationManager(callback: (Bool) -> Void){
+        if CLLocationManager.authorizationStatus() == .authorizedAlways{
+            //Granted
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            
+            
+            let uuid = UUID(uuidString: "A98DD195-4C42-4DE8-859D-66E462CD2F86")! as UUID
+            beaconRegion = CLBeaconRegion(proximityUUID: uuid, identifier: "com.agi.beacon")
+            beaconRegion.notifyOnEntry = true
+            beaconRegion.notifyOnExit = true
+            
+            locationManager.startMonitoring(for: beaconRegion)
+            locationManager.startUpdatingLocation()
+            
+            callback(true)
+            
+        } else {
+            
+            //Request access
+            callback(false)
+        }
+    }
+    
+    
+    func toggleDiscovery(){
+        if !isSearching {
+            self.initializedLocationManager(callback: { (success) in
+                if success {
+                    isSearching = true
+                } else {
+                    locationManager.requestAlwaysAuthorization()
+                }
+            })
+        } else {
+            locationManager.stopMonitoring(for: beaconRegion)
+            locationManager.stopRangingBeacons(in: beaconRegion)
+            locationManager.stopUpdatingLocation()
+            isSearching = false
+            
+        }
+    }
+    
+    func updateStatusLabels(beacons:[CLBeacon]){
+        let beacon = beacons[0] as CLBeacon
+        uuidLabel.text = beacon.proximityUUID.uuidString
+        majorLabel.text = "Major \(beacon.major.stringValue)"
+        minorLabel.text = "Minor \(beacon.minor.stringValue)"
+        
+        let accuracy = String(format: "%.2f", beacon.accuracy)
+        
+        statusLabel.text = "Beacon found is \(self.getProximityString(proximity: beacon.proximity)), it is \(accuracy)m away"
+        
+        
+        uuidLabel.isHidden = false
+        majorLabel.isHidden = false
+        minorLabel.isHidden = false
+        
+    }
+    
+    func updateButtonTitle(){
+        if isSearching {
+            self.rangingButton.setTitle("Stop Ranging", for: .normal)
+        } else {
+            self.rangingButton.setTitle("Start Ranging", for: .normal)
+        }
+    }
+    
+    
+    // MARK: Actions
     
     
     @IBAction func startButtonPressed(_ sender: Any) {
-        
+        self.toggleDiscovery()
+        self.updateButtonTitle()
     }
     
     
