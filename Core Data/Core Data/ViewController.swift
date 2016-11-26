@@ -18,11 +18,11 @@ class ViewController: UIViewController {
         
         let context = appDelegate.persistentContainer.viewContext
         
-        let newUser = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context)
-        
-        newUser.setValue("kristen", forKey: "username")
-        newUser.setValue("myPass", forKey: "password")
-        newUser.setValue(35, forKey: "age")
+//        let newUser = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context)
+//        
+//        newUser.setValue("kristen", forKey: "username")
+//        newUser.setValue("myPass", forKey: "password")
+//        newUser.setValue(5, forKey: "age")
         
         do {
             try context.save()
@@ -33,6 +33,8 @@ class ViewController: UIViewController {
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
         
+//        request.predicate = NSPredicate(format: "username = %@", "kristen")
+        
         request.returnsObjectsAsFaults = false
         
         do {
@@ -40,7 +42,23 @@ class ViewController: UIViewController {
             if results.count > 0 {
                 for i in results as! [NSManagedObject]{
                     if let username = i.value(forKey: "username") as? String{
-                        print(username)
+//                        context.delete(i)
+//                        
+//                        do {
+//                            try context.save()
+//                        } catch {
+//                            print("Delete failed")
+//                        }
+                        
+//                        print(username)
+//                        i.setValue("Dolly", forKey: "username")
+//                        do {
+//                            try context.save()
+//                            print("Saved")
+//                        } catch {
+//                            print("Rename failed")
+//                        }
+                        
                     }
                 }
             } else {
